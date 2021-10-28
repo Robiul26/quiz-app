@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font awesome v6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Start myQuizApp -->
+    <div class="myQuizApp">
+        <div class="img">
+            <img src="images/Questions.svg" alt="Questions">
+        </div>
+        <div class="text">
+            <h3>Quize Appp With Fixed Time</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut eius facere itaque quasi eaque
+                necessitatibus accusamus harum, a consequuntur, vero quo.
+                </p>
+            <h3>Quize Appp With Fixed Time</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="startQuizBtn">
+            <button>Start Quiz</button>
+        </div>
+    </div>
+    <!-- End myQuizApp -->
+
+    <!-- Start Rules Box -->
+    <div class="rulesBox">
+        <div class="rulesTitle">Some Rules of this Quiz</div>
+        <div class="rulesList">
+            <ol>
+                <li>You will have <span style="color:#007bff">15 seconds</span> per each question.</li>
+                <li>Once you select your answer, it can't be undone.</li>
+                <li>You can't select any option once time goes off.</li>
+                <li>You cna't exit from the Quiz while you're playing.</li>
+                <li>You'll get points on the basis of your correct answers.</li>
+            </ol>
+        </div>
+        <div class="buttons">
+            <button class="exitBtn">Exit Quiz</button>
+            <button class="continueBtn">Continue</button>
+        </div>
+    </div>
+    <!-- End Rules Box -->
+
+    <!-- Start Questions section -->
+    <div class="questions">
+        <div class="questionsHeader">
+            <div class="title">Start Exam</div>
+            <div class="timeCount">
+                <div class="timeLeft">Time left</div>
+                <div class="seconds">15</div>
+            </div>
+            <div class="timeLine"></div>
+        </div>
+        <div class="questionSection">
+            <div><span class="questionTitle">1.What does HTML stand for?</span></div>
+            <div class="myOptions">
+                <div class="options">
+                    <span>Hyper Text Multiple Letter</span>
+                    <i class="fa-solid fa-xmark" style="color: red;"></i>
+                </div>
+                <div class="options">
+                    <span>Hyper Text Markup Language</span>
+                    <i class="fa-solid fa-check" style="color:#007bff;"></i>
+                </div>
+                <div class="options">
+                    <span>Hyper Text Multiple Language</span>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="options">
+                    <span>Hyper Text Multi Language</span>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="totalQue">
+                <p>1 of 5 Questions</p>
+            </div>
+            <button class="nextBtn">Next Que</button>
+        </footer>
+    </div>
+    <!-- End Questions section -->
+<script src="script.js"></script>
+</body>
+
+</html>
