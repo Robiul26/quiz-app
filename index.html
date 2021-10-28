@@ -26,7 +26,7 @@
             <h3>Quize Appp With Fixed Time</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut eius facere itaque quasi eaque
                 necessitatibus accusamus harum, a consequuntur, vero quo.
-                </p>
+            </p>
             <h3>Quize Appp With Fixed Time</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -56,7 +56,7 @@
     <!-- End Rules Box -->
 
     <!-- Start Questions section -->
-    <div class="questions">
+    <div class="questionsBox">
         <div class="questionsHeader">
             <div class="title">Start Exam</div>
             <div class="timeCount">
@@ -66,9 +66,11 @@
             <div class="timeLine"></div>
         </div>
         <div class="questionSection">
-            <div><span class="questionTitle">1.What does HTML stand for?</span></div>
-            <div class="myOptions">
-                <div class="options">
+            <div class="questionTitle">
+                <!-- <span>1.What does HTML stand for?</span> -->
+            </div>
+            <div class="option_list">
+                <!-- <div class="options">
                     <span>Hyper Text Multiple Letter</span>
                     <i class="fa-solid fa-xmark" style="color: red;"></i>
                 </div>
@@ -83,7 +85,7 @@
                 <div class="options">
                     <span>Hyper Text Multi Language</span>
                     <i class="fa-solid fa-xmark"></i>
-                </div>
+                </div> -->
             </div>
         </div>
         <footer>
@@ -94,7 +96,23 @@
         </footer>
     </div>
     <!-- End Questions section -->
-<script src="script.js"></script>
+
+    <!-- Start Result Box -->
+    <div class="resultBox">
+        <div class="rulesTitle">Game Over</div>
+        <i class="fa-solid fa-crown"></i>
+        <div class="resultText">
+            <!-- <p>You've completed the Quiz! <br>
+                and sorry, You got only 2 out of 5</p> -->
+        </div>
+        <div class="buttons">
+            <button class="replayBtn">Replay Quiz</button>
+            <button class="quitQuiz">Quit Quiz</button>
+        </div>
+    </div>
+    <!-- End Result Box -->
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
 </body>
 
 </html>

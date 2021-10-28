@@ -8,6 +8,23 @@ body {
     background-color: #f1f1f1;
 }
 
+/* common */
+
+.correct {
+    background-color: #bcf3cf!important;
+    border: 1px solid #23974a!important;
+}
+
+.wrong {
+    background-color: #f9d1ce!important;
+    border: 1px solid #f10716!important;
+}
+
+.disabled {
+    pointer-events: none;
+    user-select: none;
+}
+
 /* Start myQuizApp */
 
 .myQuizApp {
@@ -149,7 +166,7 @@ ol li {
     z-index: 5;
 }
 
-.questions {
+.questionsBox {
     width: 320px;
     height: 580px;
     position: absolute;
@@ -210,6 +227,7 @@ ol li {
     bottom: 0;
     left: 0;
     height: 3px;
+    /* width: 50%; */
     background-color: #007bff;
 }
 
@@ -220,10 +238,10 @@ ol li {
 .questionTitle {
     font-size: 25px;
     font-weight: 600;
-    line-height: 0;
+    line-height: 1;
 }
 
-.myOptions {
+.option_list {
     padding: 20px 0;
     display: block;
 }
@@ -261,7 +279,12 @@ footer .totalQue {
     padding-left: 30px;
 }
 
+footer .totalQue p {
+    user-select: none;
+}
+
 footer .nextBtn {
+    display: none;
     background-color: tomato;
     font-size: 20px;
     font-weight: 600;
@@ -281,3 +304,59 @@ footer .nextBtn:hover {
 }
 
 /* End Question section */
+
+/* Start Result Box */
+
+.activeResultBox {
+    display: block!important;
+}
+
+.resultBox {
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+    border-radius: 48px;
+    display: none;
+    text-align: center;
+}
+
+.resultText {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.resultText p {
+    font-size: 1.3rem;
+    color: #343a40;
+    font-weight: 500;
+}
+
+.resultBox i {
+    font-size: 6rem;
+    color: #007bff;
+    margin-top: 115px;
+}
+
+.replayBtn {
+    border-radius: 0px 47px 0px 46px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.quitQuiz {
+    border-radius: 57px 0px 51px 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* End Result Box */
