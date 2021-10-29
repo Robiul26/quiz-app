@@ -260,6 +260,14 @@ ol li {
     transition: all 0.3s ease;
 }
 
+.options .fa-check {
+    color: green;
+}
+
+.options .fa-xmark {
+    color: red;
+}
+
 .options:hover {
     color: #004085;
     background-color: #cce5ff;
@@ -281,6 +289,8 @@ footer .totalQue {
 
 footer .totalQue p {
     user-select: none;
+    padding-top: 50%;
+    font-size: 20px;
 }
 
 footer .nextBtn {

@@ -18,6 +18,7 @@ startQuizBtn.onclick = () => {
 // if Exit button clicked
 exitBtn.onclick = () => {
     rulesBox.classList.remove('activeRulesBox');
+    document.querySelector('.myQuizApp').style.display = "block";
 }
 
 // if Continue button clicked
@@ -48,15 +49,17 @@ quit_quiz.onclick = () => {
 
 // if restart the quiz
 restart_quiz.onclick = () => {
+
+    que_count = 0;
+    userScore = 0;
+
     rulesBox.classList.remove('activeRulesBox');
-    resultBox.classList.remove('activeResultBox');
     questionsBox.classList.add('activeQuestions');
-    showQuestions(que_count);
-    startTimer(timeValue);
+    showQuestions(0);
+    startTimer(15);
     startTimerLine(0);
-    next_btn.style.display = "none";
-    timeLeft.textContent = "Time Left";
 }
+
 
 // if next button clicked
 next_btn.onclick = () => {
@@ -73,6 +76,7 @@ next_btn.onclick = () => {
         clearInterval(counter);
         clearInterval(counterLine);
         console.log("questions completed");
+        console.log(que_count);
         showResultBox();
     }
 }
@@ -94,8 +98,8 @@ showQuestions = (index) => {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 
-    let tickicon = '<i class="fa-solid fa-check" style="color:green;"></i>';
-    let crossicon = '<i class="fa-solid fa-xmark" style="color: red;"></i>';
+    let tickicon = '<i class="fa-solid fa-check"></i>';
+    let crossicon = '<i class="fa-solid fa-xmark"></i>';
     // Get selected answer
     optionSelected = (answer) => {
         // when select an option then time and time line will be stop
@@ -129,7 +133,7 @@ showQuestions = (index) => {
 
     // for bottom question count
     const botton_ques_cunter = document.querySelector('.totalQue');
-    let totalQue = `<p>${allquestions[index].numb} of ${allquestions.length} Questions</p>`;
+    let totalQue = `<p> <b>${allquestions[index].numb}</b> of <b>${allquestions.length}</b> Questions</p>`;
     botton_ques_cunter.innerHTML = totalQue;
 
 
